@@ -1,0 +1,93 @@
+---
+title: "Visão Geral"
+description: "Entenda o módulo de Pedidos"
+---
+
+# Pedidos - Visão Geral
+
+O módulo de Pedidos é onde você gerencia todas as vendas confirmadas da sua padaria ou confeitaria.
+
+## O que são Pedidos
+
+No FLUP, **Pedidos** são:
+
+- Vendas confirmadas de produtos
+- Ordens de produção
+- Entregas programadas
+- Registros de pagamentos
+
+## O ciclo de um Pedido
+
+```
+Criar → Aprovar → Produzir → Entregar → Concluir
+```
+
+## Por que usar Pedidos
+
+Usar pedidos é importante porque:
+
+- **Controle**: Você sabe o que precisa produzir
+- **Organização**: Mantém registro de todas as vendas
+- **Planejamento**: Permite programar produção e entregas
+- **Financeiro**: Registra receitas automaticamente
+
+## Status de Pedido
+
+Os pedidos podem ter os seguintes status:
+
+- **Pendente Aprovação**: Pedido criado, aguardando aprovação
+- **Aprovado**: Pedido aprovado, pronto para produção
+- **Recusado**: Pedido rejeitado
+- **Pendente**: Pedido aguardando produção
+- **Em Produção**: Pedido em produção
+- **Concluído**: Pedido entregue e finalizado
+- **Cancelado**: Pedido cancelado
+
+## Informações de um Pedido
+
+Ao criar um pedido, você define:
+
+| Campo | O que é | Obrigatório |
+|-------|---------|-------------|
+| Cliente | Cliente que fez o pedido | Sim |
+| Itens | Produtos/serviços solicitados | Sim |
+| Forma de Pagamento | Como o cliente vai pagar | Sim |
+| Tipo de Entrega | Delivery ou retirada | Não |
+| Data | Data do pedido | Automático |
+| Desconto | Desconto aplicado (opcional) | Não |
+| Notas | Observações (opcional) | Não |
+
+## Descontos
+
+Você pode aplicar dois tipos de desconto:
+
+- **Percentual**: Porcentagem sobre o total (ex: 10%)
+- **Fixo**: Valor fixo de desconto (ex: R$ 50,00)
+
+## Tipos de Entrega
+
+- **Delivery**: Entrega em domicílio
+- **Retirada**: Cliente retira no local
+
+## PDF de Pedido
+
+Você pode gerar um PDF do pedido:
+
+- Para imprimir
+- Para enviar ao cliente
+- Para guardar como registro
+
+## Orçamento para Pedido
+
+Pedidos podem ser criados:
+
+- Diretamente (sem orçamento prévio)
+- A partir de um orçamento convertido
+
+## Próximos passos
+
+Após criar pedidos:
+
+1. Acompanhe o status de cada pedido
+2. Mova para "Em Produção" quando começar a produzir
+3. Mova para "Concluído" quando entregar

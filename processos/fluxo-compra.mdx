@@ -1,0 +1,86 @@
+---
+title: "Fluxo de Compra"
+description: "Como registrar compras e repor estoque"
+---
+
+# Fluxo de Compra
+
+Este guia mostra como registrar compras e repor o estoque no FLUP.
+
+## Visão geral do fluxo
+
+```
+Identificar necessidade → Comprar → Registrar entrada → Atualizar custo
+```
+
+## Passo 1 — Identificar necessidade
+
+### Verificar estoque baixo
+
+1. Acesse **Estoque**
+2. Use o filtro "Estoque Baixo" para ver produtos abaixo do mínimo
+3. Anote quais produtos precisam ser repostos
+
+### Verificar Dashboard
+
+1. Acesse **Dashboard**
+2. Veja se há alertas de estoque baixo
+3. Anote os produtos que precisam de atenção
+
+## Passo 2 — Fazer a compra
+
+1. Compre os produtos necessários
+2. Guarde a nota fiscal ou recibo
+3. Anote o custo total de cada produto
+
+## Passo 3 — Registrar entrada no estoque
+
+1. Acesse **Estoque**
+2. Encontre o produto comprado
+3. Clique no botão **+** (verde) na linha do produto
+4. Preencha:
+   - **Quantidade**: Quantidade comprada
+   - **Motivo**: Selecione "Compra"
+   - **Observações**: Adicione notas (ex: "Compra Atacadão", "Nota fiscal #123")
+5. Clique em **Confirmar**
+
+<Callout type="info">
+  Se o produto não tiver estoque cadastrado, você precisará criar um item de estoque primeiro.
+</Callout>
+
+## Passo 4 — Atualizar custo (se necessário)
+
+Se o custo do produto mudou:
+
+1. Na linha do produto, clique no ícone de lápis (✏️)
+2. Clique no ícone de olho (👁️) para ver detalhes
+3. Clique em **Editar** para atualizar o custo por unidade
+4. Informe o novo custo
+5. Clique em **Salvar**
+
+## Passo 5 — Registrar despesa no fluxo de caixa
+
+1. Acesse **Fluxo de Caixa**
+2. Clique em **Nova Transação**
+3. Selecione **Despesa**
+4. Escolha a categoria "Matéria-prima"
+5. Informe o valor total da compra
+6. Use a nota fiscal como referência
+7. Clique em **Criar**
+
+## Resumo
+
+| Etapa | O que fazer | Onde |
+|-------|-------------|------|
+| Identificar necessidade | Verificar estoque baixo | Estoque/Dashboard |
+| Comprar | Fazer a compra | Externo |
+| Registrar entrada | Adicionar ao estoque | Estoque |
+| Atualizar custo | Atualizar preço unitário | Estoque |
+| Registrar despesa | Registrar no fluxo de caixa | Fluxo de Caixa |
+
+## Dicas
+
+- Registre compras logo após receber os produtos
+- Use observações para rastrear fornecedores
+- Atualize custos regularmente para cálculos precisos
+- Mantenha notas fiscais para referência

@@ -1,0 +1,165 @@
+---
+title: "Dúvidas Frequentes"
+description: "Perguntas e respostas comuns"
+---
+
+# Dúvidas Frequentes
+
+Aqui estão as perguntas mais frequentes sobre o uso do FLUP.
+
+## Acesso e Login
+
+### Não consigo fazer login. O que fazer?
+
+Verifique:
+- Se está digitando o email corretamente
+- Se a senha está correta (verifique Caps Lock)
+- Se seu usuário está ativo
+
+Se continuar com problemas, entre em contato com o administrador da sua organização.
+
+### Esqueci minha senha. Como recuperar?
+
+Entre em contato com o administrador da sua organização. Ele poderá redefinir sua senha.
+
+### Posso acessar de qualquer lugar?
+
+Sim, você pode acessar o FLUP de qualquer lugar com conexão à internet, usando seu email e senha.
+
+## Produtos e Estoque
+
+### Qual a diferença entre Produto e Receita?
+
+- **Produto**: Ingrediente ou matéria-prima que você compra (ex: farinha, açúcar)
+- **Receita**: Fórmula do produto final que você vende (ex: bolo de chocolate)
+
+### Como cadastrar um produto?
+
+Veja o guia [Como Cadastrar um Produto](/produtos/cadastrar).
+
+### O que fazer quando o estoque está baixo?
+
+O sistema alerta automaticamente quando um produto está abaixo do estoque mínimo. Para repor:
+
+1. Faça a compra do produto
+2. Registre a entrada no estoque (veja [Fluxo de Compra](/processos/fluxo-compra))
+
+### Posso excluir um produto que tem estoque?
+
+Não. Você precisa primeiro zerar o estoque ou desativar o produto em vez de excluir.
+
+## Receitas e Produção
+
+### Como criar uma receita?
+
+Veja o guia [Como Cadastrar uma Receita](/receitas/cadastrar).
+
+### O sistema calcula o custo automaticamente?
+
+Sim. O sistema calcula o custo total baseado no custo dos ingredientes e sugere o preço de venda com base na margem definida.
+
+### O que acontece quando registro produção?
+
+- Os ingredientes são deduzidos do estoque
+- O produto pronto é adicionado ao estoque produzido
+- O custo de produção é registrado
+
+### O que fazer se não tiver ingredientes suficientes?
+
+O sistema mostrará quais ingredientes faltam. Você precis:
+
+1. Registrar a entrada dos ingredientes que faltam
+2. Depois registrar a produção
+
+## Orçamentos e Pedidos
+
+### Qual a diferença entre Orçamento e Pedido?
+
+- **Orçamento**: Proposta de preço que pode ser aprovada ou rejeitada
+- **Pedido**: Venda confirmada que entra em produção
+
+### Como converter orçamento em pedido?
+
+Veja o guia [Como Converter Orçamento em Pedido](/orcamentos/converter).
+
+### Posso criar pedido sem orçamento?
+
+Sim. Você pode criar pedidos diretamente sem passar por orçamento.
+
+### O que significa cada status de pedido?
+
+- **Pendente Aprovação**: Pedido criado, aguardando aprovação
+- **Aprovado**: Pedido aprovado, pronto para produção
+- **Pendente**: Pedido aguardando produção
+- **Em Produção**: Pedido em produção
+- **Concluído**: Pedido entregue e finalizado
+- **Cancelado**: Pedido cancelado
+
+## Clientes
+
+### Como cadastrar um cliente?
+
+Veja o guia [Como Cadastrar um Cliente](/clientes/cadastrar).
+
+### Posso editar informações de um cliente?
+
+Sim. Na lista de clientes, clique no ícone de editar (✏️) na linha do cliente.
+
+### O que acontece se excluir um cliente?
+
+O cliente é removido do sistema. O histórico de pedidos é mantido, mas o cliente não pode mais ser selecionado em novos pedidos.
+
+## Fluxo de Caixa
+
+### As vendas são registradas automaticamente?
+
+Depende da configuração do sistema. Em alguns casos, quando um pedido concluído, a receita é registrada automaticamente. Em outros, você precisa registrar manualmente.
+
+### Como registrar uma despesa?
+
+Veja o guia [Como Registrar uma Transação](/fluxo-de-caixa/registrar).
+
+### Posso criar categorias personalizadas?
+
+Sim. Ao registrar uma transação, você pode criar novas categorias clicando em **+ Nova Categoria**.
+
+## Relatórios
+
+### Como ver o lucro do mês?
+
+Acesse o **Dashboard** ou **Relatórios** para ver o lucro do mês (receitas menos despesas).
+
+### Posso exportar os dados?
+
+Sim. Muitos relatórios permitem exportar para Excel ou PDF.
+
+## Erros Comuns
+
+### "Produto não tem estoque cadastrado"
+
+Isso significa que o produto existe mas não tem um item de estoque. Você precisa:
+
+1. Acessar **Estoque**
+2. Clicar em **Nova Compra** para criar o item de estoque inicial
+
+### "Estoque insuficiente para produção"
+
+Isso significa que não há ingredientes suficientes. Você precisa:
+
+1. Verificar quais ingredientes faltam
+2. Registrar a entrada desses ingredientes
+3. Tentar registrar a produção novamente
+
+### "Orçamento já convertido"
+
+Isso significa que o orçamento já foi convertido em pedido e não pode mais ser editado.
+
+## Suporte
+
+### Como entrar em contato com o suporte?
+
+Entre em contato com o administrador da sua organização. Ele poderá ajudar ou encaminhar para o suporte técnico.
+
+### Onde posso encontrar mais ajuda?
+
+Consulte os guias específicos de cada módulo na documentação ou entre em contato com o suporte.

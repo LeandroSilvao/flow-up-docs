@@ -1,0 +1,84 @@
+---
+title: "Visão Geral"
+description: "Entenda o módulo de Orçamentos"
+---
+
+# Orçamentos - Visão Geral
+
+O módulo de Orçamentos é onde você cria propostas de venda para seus clientes antes de confirmar o pedido.
+
+## O que são Orçamentos
+
+No FLUP, **Orçamentos** são:
+
+- Propostas de preço para clientes
+- Documentos prévios antes de virar pedido
+- Cotações que podem ser aprovadas ou rejeitadas
+
+## O ciclo de um Orçamento
+
+```
+Criar → Enviar ao Cliente → Aprovar → Converter em Pedido
+```
+
+## Por que usar Orçamentos
+
+Usar orçamentos é importante porque:
+
+- **Profissionalismo**: Apresenta propostas formais
+- **Aprovação**: Cliente aprova antes de produzir
+- **Planejamento**: Você sabe o que produzir antecipadamente
+- **Histórico**: Mantém registro de todas as propostas
+
+## Status de Orçamento
+
+Os orçamentos podem ter os seguintes status:
+
+- **PENDENTE**: Orçamento criado, aguardando aprovação
+- **PEDIDO**: Orçamento convertido em pedido
+- **ENCERRADO**: Orçamento cancelado ou expirado
+
+## Informações de um Orçamento
+
+Ao criar um orçamento, você define:
+
+| Campo | O que é | Obrigatório |
+|-------|---------|-------------|
+| Cliente | Cliente para quem é o orçamento | Sim |
+| Itens | Produtos/serviços incluídos | Sim |
+| Forma de Pagamento | Como o cliente vai pagar | Sim |
+| Tipo de Entrega | Delivery ou retirada | Não |
+| Desconto | Desconto aplicado (opcional) | Não |
+| Notas | Observações (opcional) | Não |
+
+## Descontos
+
+Você pode aplicar dois tipos de desconto:
+
+- **Percentual**: Porcentagem sobre o total (ex: 10%)
+- **Fixo**: Valor fixo de desconto (ex: R$ 50,00)
+
+## Conversão em Pedido
+
+Quando o cliente aprova o orçamento:
+
+1. Você converte o orçamento em pedido
+2. O status muda para "PEDIDO"
+3. O pedido é criado com todos os dados do orçamento
+4. O estoque pode ser deduzido (dependendo da configuração)
+
+## PDF de Orçamento
+
+Você pode gerar um PDF do orçamento:
+
+- Para enviar ao cliente
+- Para imprimir
+- Para guardar como registro
+
+## Próximos passos
+
+Após criar orçamentos:
+
+1. Envie ao cliente para aprovação
+2. Converta em pedido quando aprovado
+3. Acompanhe o status do pedido resultante

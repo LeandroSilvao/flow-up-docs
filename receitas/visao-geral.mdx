@@ -1,0 +1,78 @@
+---
+title: "Visão Geral"
+description: "Entenda o módulo de Receitas e Precificação"
+---
+
+# Receitas e Precificação - Visão Geral
+
+O módulo de Receitas e Precificação é onde você monta as receitas dos seus produtos e calcula automaticamente os custos e preços de venda.
+
+## O que são Receitas
+
+No FLUP, **Receitas** são as fórmulas dos produtos que você vende:
+
+- Bolo de Chocolate
+- Pão Francês
+- Sonho
+- Croissant
+- Etc.
+
+Cada receita é composta por ingredientes (produtos cadastrados) e define quanto de cada ingrediente é usado.
+
+## Por que criar Receitas
+
+Criar receitas é importante porque:
+
+- **Cálculo automático de custos**: O sistema calcula o custo baseado nos ingredientes
+- **Precificação inteligente**: O sistema sugere o preço de venda com base na margem
+- **Controle de produção**: Você sabe quanto custa produzir cada item
+- **Gestão de estoque**: Ao produzir, o sistema deduz os ingredientes do estoque
+
+## Informações de uma Receita
+
+Ao criar uma receita, você define:
+
+| Campo | O que é | Obrigatório |
+|-------|---------|-------------|
+| Nome do Produto | Nome da receita (ex: Bolo de Chocolate) | Sim |
+| Ingredientes | Lista de produtos e quantidades | Sim |
+| Margem Desejada | Porcentagem de lucro (ex: 60%) | Não (padrão: 60%) |
+| Quantidade Produzida | Quanto a receita rende (ex: 12 fatias) | Não (padrão: 1) |
+| Unidade de Rendimento | Unidade do produto final (ex: fatia, unidade) | Não (padrão: unidade) |
+
+## Cálculo Automático
+
+O FLUP calcula automaticamente:
+
+- **Custo Total**: Soma do custo de todos os ingredientes
+- **Preço Sugerido**: Custo total dividido por (1 - margem/100)
+- **Lucro por Unidade**: Preço sugerido menos custo total
+- **Preço por Unidade**: Preço sugerido dividido pela quantidade produzida
+
+## Estoque Produzido
+
+O módulo também gerencia o estoque de produtos prontos:
+
+- **Registrar Produção**: Quando você produz, o estoque de ingredientes é deduzido
+- **Estoque Produzido**: O sistema rastreia quanto de cada receita está pronto
+- **Ajustes**: Você pode ajustar o estoque produzido manualmente
+
+## Unidades de Rendimento
+
+Você pode criar unidades personalizadas para seus produtos:
+
+- fatia
+- unidade
+- kg
+- litro
+- Etc.
+
+Isso ajuda a vender produtos por fração (ex: vender fatias de bolo).
+
+## Próximos passos
+
+Após criar suas receitas:
+
+1. Registre produções para deduzir ingredientes do estoque
+2. Use as receitas em orçamentos e pedidos
+3. Acompanhe o estoque produzido na aba "Estoque Produzido"

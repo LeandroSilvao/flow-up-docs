@@ -1,0 +1,99 @@
+---
+title: "Visão Geral"
+description: "Entenda o módulo de Fluxo de Caixa"
+---
+
+# Fluxo de Caixa - Visão Geral
+
+O módulo de Fluxo de Caixa é onde você registra todas as receitas e despesas do seu negócio.
+
+## O que é Fluxo de Caixa
+
+No FLUP, o **Fluxo de Caixa** rastreia:
+
+- Receitas (entradas de dinheiro)
+- Despesas (saídas de dinheiro)
+- Saldo atual
+- Histórico de transações
+
+## Por que usar Fluxo de Caixa
+
+Usar o fluxo de caixa é importante porque:
+
+- **Controle financeiro**: Você sabe quanto tem disponível
+- **Planejamento**: Pode prever necessidades futuras
+- **Histórico**: Mantém registro de todas as transações
+- **Relatórios**: Gera relatórios financeiros
+
+## Tipos de Transação
+
+### Receitas (Entradas)
+
+- Vendas de produtos
+- Pagamentos de pedidos
+- Outras entradas
+
+### Despesas (Saídas)
+
+- Compras de produtos
+- Pagamentos de fornecedores
+- Aluguel
+- Salários
+- Outras saídas
+
+## Informações de uma Transação
+
+Ao registrar uma transação, você informa:
+
+| Campo | O que é | Obrigatório |
+|-------|---------|-------------|
+| Tipo | Receita ou Despesa | Sim |
+| Categoria | Categoria da transação | Sim |
+| Valor | Valor da transação | Sim |
+| Data | Data da transação | Sim (padrão: hoje) |
+| Descrição | Descrição da transação | Sim |
+| Referência | Referência opcional (ex: número do pedido) | Não |
+
+## Categorias
+
+Você pode criar categorias para organizar suas transações:
+
+### Receitas
+- Vendas
+- Serviços
+- Outras
+
+### Despesas
+- Matéria-prima
+- Embalagens
+- Aluguel
+- Salários
+- Energia
+- Outras
+
+## Saldo
+
+O sistema calcula automaticamente:
+
+- **Saldo Atual**: Receitas menos despesas
+- **Receitas do Mês**: Total de receitas do mês atual
+- **Despesas do Mês**: Total de despesas do mês atual
+- **Lucro do Mês**: Receitas menos despesas do mês
+
+## Integração com Pedidos
+
+Quando um pedido é concluído:
+
+- O valor do pedido pode ser registrado automaticamente como receita
+- A forma de pagamento é registrada
+- A referência é o número do pedido
+
+Isso depende da configuração do sistema.
+
+## Próximos passos
+
+Após entender o fluxo de caixa:
+
+1. Registre suas transações diariamente
+2. Crie categorias para organizar melhor
+3. Acompanhe o saldo regularmente

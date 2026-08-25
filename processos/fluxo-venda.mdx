@@ -1,0 +1,111 @@
+---
+title: "Fluxo Completo de Venda"
+description: "Do orçamento à entrega"
+---
+
+# Fluxo Completo de Venda
+
+Este guia mostra o fluxo completo de uma venda no FLUP, desde o orçamento até a entrega.
+
+## Visão geral do fluxo
+
+```
+Orçamento → Aprovação → Pedido → Produção → Entrega → Pagamento
+```
+
+## Passo 1 — Criar Orçamento
+
+1. Acesse **Orçamentos**
+2. Clique em **Novo Orçamento**
+3. Selecione o cliente
+4. Adicione os itens desejados
+5. Defina forma de pagamento e tipo de entrega
+6. Aplique desconto se necessário
+7. Salve o orçamento
+
+<Callout type="info">
+  O orçamento fica com status "PENDENTE" aguardando aprovação do cliente.
+</Callout>
+
+## Passo 2 — Enviar ao Cliente
+
+1. Clique no botão de impressora no orçamento
+2. Gere o PDF
+3. Envie ao cliente por email ou WhatsApp
+4. Aguarde aprovação
+
+## Passo 3 — Converter em Pedido
+
+Quando o cliente aprovar:
+
+1. Acesse **Orçamentos**
+2. Encontre o orçamento aprovado
+3. Clique no ícone de conversão (↻)
+4. Escolha as opções:
+   - Se o cliente já pagou: marque "Pago"
+   - Se vai produzir agora: marque "Iniciar agora"
+   - Se vai produzir depois: marque "Agendar" e defina datas
+5. Clique em **Converter**
+
+## Passo 4 — Produzir (se iniciou agora)
+
+### Se tem estoque de produtos prontos
+
+O sistema deduz automaticamente do estoque produzido.
+
+### Se não tem estoque
+
+1. Acesse **Receitas e Precificação**
+2. Clique na aba **Estoque Produzido**
+3. Clique em **Registrar Produção**
+4. Selecione a receita
+5. Informe a quantidade
+6. Clique em **Registrar**
+
+<Callout type="warning">
+  Se não tiver ingredientes suficientes, o sistema mostrará o que falta. Você precis repor antes de produzir.
+</Callout>
+
+## Passo 5 — Acompanhar Produção
+
+1. Acesse **Pedidos**
+2. Encontre o pedido
+3. Verifique se o status é "Em Produção"
+4. Se necessário, altere o status manualmente
+
+## Passo 6 — Entregar
+
+Quando o produto estiver pronto:
+
+1. Acesse **Pedidos**
+2. Encontre o pedido
+3. Clique no menu de status
+4. Selecione **Concluído**
+
+## Passo 7 — Receber Pagamento (se ainda não pago)
+
+1. Acesse **Fluxo de Caixa**
+2. Clique em **Nova Transação**
+3. Selecione **Receita**
+4. Escolha a categoria "Vendas"
+5. Informe o valor do pedido
+6. Use o número do pedido como referência
+7. Clique em **Criar**
+
+## Resumo
+
+| Etapa | O que fazer | Onde |
+|-------|-------------|------|
+| Orçamento | Criar proposta | Orçamentos |
+| Aprovação | Enviar ao cliente | Orçamentos |
+| Pedido | Converter orçamento | Orçamentos |
+| Produção | Registrar produção | Receitas/Estoque |
+| Entrega | Concluir pedido | Pedidos |
+| Pagamento | Registrar receita | Fluxo de Caixa |
+
+## Dicas
+
+- Sempre crie orçamento antes de produzir para evitar desperdício
+- Verifique o estoque antes de converter orçamento
+- Use agendamento para planejar produção com antecedência
+- Registre pagamentos imediatamente após receber

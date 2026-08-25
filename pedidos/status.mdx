@@ -1,0 +1,66 @@
+---
+title: "Alterar Status"
+description: "Como mudar o status de um pedido"
+---
+
+# Como Alterar o Status de um Pedido
+
+O status do pedido indica em que etapa ele está. Você pode alterar o status conforme o pedido avança.
+
+## Status disponíveis
+
+- **Pendente Aprovação**: Pedido criado, aguardando aprovação
+- **Aprovado**: Pedido aprovado, pronto para produção
+- **Recusado**: Pedido rejeitado
+- **Pendente**: Pedido aguardando produção
+- **Em Produção**: Pedido em produção
+- **Concluído**: Pedido entregue e finalizado
+- **Cancelado**: Pedido cancelado
+
+## Fluxo típico
+
+```
+Pendente Aprovação → Aprovado → Pendente → Em Produção → Concluído
+```
+
+## Passo 1 — Acesse Pedidos
+
+1. No menu lateral, clique em **Pedidos**
+2. Encontre o pedido que deseja alterar
+
+## Passo 2 — Clique no menu de status
+
+1. Na linha do pedido, clique na seta ao lado do status atual
+2. Um menu será aberto com os status disponíveis
+
+## Passo 3 — Selecione o novo status
+
+1. Clique no status desejado
+2. O status será alterado imediatamente
+
+## O que acontece ao alterar o status
+
+### Para "Em Produção"
+
+- O sistema verifica se há estoque suficiente
+- Se houver: deduz do estoque de produtos prontos ou ingredientes
+- Se não houver: mostra alerta informando que produção precisa ser registrada
+
+### Para "Concluído"
+
+- O pedido é marcado como entregue
+- A receita é registrada no fluxo de caixa (se configurado)
+- O pedido não pode mais ser editado
+
+### Para "Cancelado"
+
+- O pedido é cancelado
+- O estoque não é devolvido automaticamente
+- Você precisa ajustar o estoque manualmente se necessário
+
+## Dicas
+
+- Aprove pedidos antes de mover para produção
+- Mova para "Em Produção" apenas quando começar a produzir
+- Mova para "Concluído" apenas quando entregar
+- Use "Cancelado" apenas quando o pedido for cancelado definitivamente

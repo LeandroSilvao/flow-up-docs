@@ -1,0 +1,91 @@
+---
+title: "Converter em Pedido"
+description: "Como transformar um orçamento em pedido"
+---
+
+# Como Converter Orçamento em Pedido
+
+Quando o cliente aprovar o orçamento, você pode convertê-lo em pedido.
+
+## Antes de converter
+
+Verifique se:
+
+- O cliente aprovou o orçamento
+- O orçamento está com status "PENDENTE"
+- Você tem estoque suficiente (se necessário)
+
+## Passo 1 — Acesse Orçamentos
+
+1. No menu lateral, clique em **Orçamentos**
+2. Encontre o orçamento que deseja converter
+
+## Passo 2 — Clique em converter
+
+1. Na linha do orçamento, clique no ícone de conversão (↻)
+2. Uma janela será aberta com opções de conversão
+
+## Passo 3 — Escolha as opções
+
+### Pagamento
+
+Marque se o cliente já pagou:
+
+- **Pago**: O cliente já pagou
+- **Não pago**: O cliente pagará na entrega
+
+### Produção
+
+Escolha quando produzir:
+
+#### Iniciar agora
+- O pedido entra em produção imediatamente
+- O estoque é deduzido agora
+- Status do pedido: "Em Produção"
+
+#### Agendar para depois
+- O pedido fica agendado
+- O estoque não é deduzido agora
+- Você define a data de produção
+- Status do pedido: "Pendente"
+
+### Datas (se agendado)
+
+Se escolher agendar:
+
+1. Informe a **Data de Produção**
+2. Informe a **Data de Entrega**
+3. O sistema enviará lembretes nas datas definidas
+
+## Passo 4 — Confirme a conversão
+
+1. Clique no botão **Converter**
+2. O orçamento será convertido em pedido
+
+## Resultado
+
+Após converter:
+
+- O orçamento muda para status "PEDIDO"
+- Um novo pedido é criado
+- O pedido é vinculado ao orçamento
+- O estoque é deduzido (se iniciou produção agora)
+
+## O que acontece com o estoque
+
+### Se iniciou produção agora
+
+- O sistema verifica se há estoque suficiente
+- Se houver: deduz do estoque de produtos prontos ou ingredientes
+- Se não houver: mostra erro e não converte
+
+### Se agendou produção
+
+- O estoque não é deduzido agora
+- Será deduzido quando o pedido for movido para "Em Produção"
+
+## Dicas
+
+- Converta apenas após aprovação do cliente
+- Agende produção se não tiver estoque agora
+- Use agendamento para planejar melhor a produção
