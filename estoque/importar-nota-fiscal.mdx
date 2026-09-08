@@ -1,0 +1,87 @@
+---
+title: "Importar Nota Fiscal"
+description: "Como importar uma NF-e ou NFC-e em XML para lançar a compra automaticamente"
+---
+
+# Importar Nota Fiscal
+
+Em vez de cadastrar cada produto comprado manualmente, você pode enviar o arquivo XML da nota fiscal do fornecedor e o FLUP lê os itens, sugere os produtos correspondentes no seu cadastro e lança a compra no estoque de uma vez.
+
+## O que é aceito
+
+- **NF-e (modelo 55)**: nota fiscal comum, emitida por fornecedores no atacado (ex: atacarejos vendendo para o seu CNPJ)
+- **NFC-e (modelo 65)**: nota de consumidor, comum em compras no varejo
+- Versão **4.00**, em arquivo **.xml** de até **2MB**
+
+<Callout type="info">
+  O nome do arquivo não precisa terminar em `.xml`. Se o fornecedor ou outra pessoa reenviar a nota com o nome alterado (ex: sem extensão), o FLUP ainda consegue processar — o que importa é o conteúdo do arquivo, não o nome.
+</Callout>
+
+## Passo 1 — Acesse a importação
+
+1. No menu lateral, clique em **Estoque**
+2. Clique no botão **Importar nota fiscal**
+
+## Passo 2 — Envie o arquivo XML
+
+1. Clique em **Selecionar arquivo XML**
+2. Escolha o arquivo da nota fiscal recebida do fornecedor
+
+Se a nota já tiver sido importada antes (mesma chave de acesso), o FLUP avisa e não deixa importar de novo.
+
+## Passo 3 — Revise os itens (regra de verificação)
+
+Depois do envio, o FLUP mostra o resumo da nota (fornecedor, número, data, total) e a lista de itens. Cada item recebe automaticamente um status, com base no código de barras (GTIN):
+
+| Status | O que significa | Como o FLUP decide |
+|--------|------------------|---------------------|
+| **Encontrado** | O item já bate com um produto existente no seu cadastro | O GTIN do item é **confiável** (dígito verificador válido, não é um código de balança) e já existe um produto seu com esse mesmo GTIN |
+| **Novo produto** | O GTIN é confiável, mas nenhum produto seu usa esse código ainda | O FLUP sugere produtos parecidos pelo nome, caso você já tenha cadastrado esse item sob outro código |
+| **Revisar** | O item não tem GTIN, ou o GTIN não é confiável (falhou na validação, ou é um código gerado por balança de peso) | O FLUP nunca associa um item automaticamente a partir de um GTIN não confiável — você decide manualmente |
+
+<Callout type="warning">
+  Códigos de balança (comuns em hortifrúti, açougue e padaria — começam com "2" e têm 13 dígitos) nunca são tratados como GTIN real, mesmo que o dígito verificador "bata" por coincidência. Esses itens sempre entram como **Revisar**.
+</Callout>
+
+Para cada item que não veio como **Encontrado**, você tem estas ações:
+
+- **Buscar produto**: procurar e vincular a um produto já existente no seu cadastro
+- **Criar novo produto**: cadastrar esse item como um produto novo
+- **Ignorar**: não lançar esse item nesta compra (por exemplo, um item que não é ingrediente)
+
+Você também pode ajustar a **quantidade** e o **preço unitário** de cada item antes de confirmar — os valores vêm da nota, mas podem ser corrigidos se necessário.
+
+### Itens repetidos (mesmo produto em várias linhas)
+
+Quando a nota tem o mesmo produto em mais de uma linha — comum em itens pesados, como uma fruta ou verdura comprada em pesagens diferentes — o FLUP agrupa essas linhas automaticamente pelo nome do item. Você só precisa decidir a primeira linha do grupo (**Buscar produto** ou **Criar novo produto**); as demais linhas seguem a mesma decisão sozinhas, mostrando "Mesmo produto da linha X".
+
+Se alguma linha do grupo for de um produto diferente apesar do nome parecido, use **Não é o mesmo produto** para desvincular e decidir aquela linha separadamente.
+
+<Callout type="info">
+  É normal duas linhas do mesmo produto pesado saírem com preço unitário levemente diferente (ex: R$ 3,99 numa e R$ 4,00 noutra). Isso vem da própria nota fiscal: a balança do fornecedor calcula o valor unitário dividindo o valor total (já arredondado em centavos) pelo peso exato de cada pesagem — não é um erro do FLUP.
+</Callout>
+
+## Passo 4 — Confirme a compra
+
+1. Revise o **total da compra** — se não bater com o total da nota, o FLUP avisa
+2. Marque **Lançar também no financeiro** se quiser criar automaticamente uma despesa no Fluxo de Caixa com o valor da compra
+3. Clique em **Confirmar compra**
+
+<Callout type="warning">
+  Enquanto houver itens sem decisão (nem Buscar produto, nem Criar novo produto, nem Ignorar), o botão **Confirmar compra** fica bloqueado.
+</Callout>
+
+## Resultado
+
+Ao confirmar, o FLUP:
+
+- Cria os produtos novos que você optou por criar
+- Atualiza o estoque de cada produto lançado (quantidade e custo)
+- Registra as movimentações de entrada no histórico de estoque
+- Cria a despesa no Fluxo de Caixa, se você marcou essa opção
+
+## Dicas
+
+- Prefira importar a nota assim que receber, para o custo do estoque ficar sempre atualizado
+- Use **Buscar produto** em vez de **Criar novo produto** sempre que o item já existir com outro nome, para não duplicar o cadastro
+- Itens de embalagem, frete ou serviços que não fazem parte do seu estoque de ingredientes devem ser **Ignorados**

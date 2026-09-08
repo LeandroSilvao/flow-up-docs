@@ -46,7 +46,8 @@
         "group": "Estoque",
         "pages": [
           "estoque/visao-geral",
-          "estoque/movimentar"
+          "estoque/movimentar",
+          "estoque/importar-nota-fiscal"
         ]
       },
       {
