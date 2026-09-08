@@ -3,9 +3,9 @@
   "theme": "maple",
   "name": "Flup",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#22E08D",
+    "light": "#06D5BB",
+    "dark": "#11A2E1"
   },
   "favicon": {
     "light": "/images/ico.png",
@@ -124,11 +124,121 @@
     ],
     "global": {
       "anchors": []
-    }
+    },
+    "groups": [
+      {
+        "group": "Primeiros Passos",
+        "pages": [
+          "index",
+          {
+            "group": "Introdução",
+            "pages": [
+              "primeiros-passos/acesso",
+              "primeiros-passos/navegacao",
+              "primeiros-passos/dashboard"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Produtos",
+        "pages": [
+          "produtos/visao-geral",
+          "produtos/cadastrar",
+          "produtos/editar",
+          "produtos/excluir",
+          "produtos/marcas"
+        ]
+      },
+      {
+        "group": "Receitas",
+        "pages": [
+          "receitas/visao-geral",
+          "receitas/cadastrar",
+          "receitas/produzir"
+        ]
+      },
+      {
+        "group": "Estoque",
+        "pages": [
+          "estoque/visao-geral",
+          "estoque/movimentar",
+          ""
+        ]
+      },
+      {
+        "group": "Clientes",
+        "pages": [
+          "clientes/visao-geral",
+          "clientes/cadastrar"
+        ]
+      },
+      {
+        "group": "Orçamentos",
+        "pages": [
+          "orcamentos/visao-geral",
+          "orcamentos/criar",
+          "orcamentos/converter"
+        ]
+      },
+      {
+        "group": "Pedidos",
+        "pages": [
+          "pedidos/visao-geral",
+          "pedidos/criar",
+          "pedidos/status"
+        ]
+      },
+      {
+        "group": "Fluxo de Caixa",
+        "pages": [
+          "fluxo-de-caixa/visao-geral",
+          "fluxo-de-caixa/registrar"
+        ]
+      },
+      {
+        "group": "Relatórios",
+        "pages": [
+          "relatorios/visao-geral"
+        ]
+      },
+      {
+        "group": "Cardápio",
+        "pages": [
+          "cardapio/visao-geral"
+        ]
+      },
+      {
+        "group": "Calendário",
+        "pages": [
+          "calendario/visao-geral"
+        ]
+      },
+      {
+        "group": "Configurações",
+        "pages": [
+          "configuracoes/visao-geral"
+        ]
+      },
+      {
+        "group": "Processos",
+        "pages": [
+          "processos/fluxo-venda",
+          "processos/fluxo-compra",
+          "processos/fluxo-producao"
+        ]
+      },
+      {
+        "group": "Dúvidas Frequentes",
+        "pages": [
+          "duvidas-frequentes/visao-geral"
+        ]
+      }
+    ]
   },
   "logo": {
-    "light": "/images/ico.png",
-    "dark": "/images/ico.png",
+    "light": "/images/flup-horizontal-black.png",
+    "dark": "/images/flup-horizontal-white.png",
     "href": "https://flup.devmars.com.br/"
   },
   "navbar": {
@@ -144,23 +254,11 @@
       "href": "https://app.mintlify.com"
     }
   },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+  "appearance": {
+    "default": "light",
+    "strict": true
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  "background": {
+    "decoration": "gradient"
   }
 }
